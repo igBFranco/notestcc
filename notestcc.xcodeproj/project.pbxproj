@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		533A9E282A76AA4900747BAA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A9E272A76AA4900747BAA /* ImagePicker.swift */; };
 		53F2A74C2A708A4F009A2F90 /* notestccApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74B2A708A4F009A2F90 /* notestccApp.swift */; };
 		53F2A74E2A708A4F009A2F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74D2A708A4F009A2F90 /* ContentView.swift */; };
 		53F2A7502A708A51009A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F2A74F2A708A51009A2F90 /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		533A9E272A76AA4900747BAA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		533A9E292A76AE1300747BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		53F2A7482A708A4F009A2F90 /* notestcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notestcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F2A74B2A708A4F009A2F90 /* notestccApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notestccApp.swift; sourceTree = "<group>"; };
 		53F2A74D2A708A4F009A2F90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,10 +109,12 @@
 		53F2A74A2A708A4F009A2F90 /* notestcc */ = {
 			isa = PBXGroup;
 			children = (
+				533A9E292A76AE1300747BAA /* Info.plist */,
 				53F2A74B2A708A4F009A2F90 /* notestccApp.swift */,
 				53F2A74D2A708A4F009A2F90 /* ContentView.swift */,
 				53F2A77E2A709CA7009A2F90 /* NoteDetailView.swift */,
 				53F2A7802A709CEE009A2F90 /* AddNoteView.swift */,
+				533A9E272A76AA4900747BAA /* ImagePicker.swift */,
 				53F2A7842A71F3CD009A2F90 /* MapLocation.swift */,
 				53F2A74F2A708A51009A2F90 /* Assets.xcassets */,
 				53F2A7542A708A51009A2F90 /* Persistence.swift */,
@@ -278,6 +283,7 @@
 				53F2A77D2A709C17009A2F90 /* Note.swift in Sources */,
 				53F2A7582A708A51009A2F90 /* notestcc.xcdatamodeld in Sources */,
 				53F2A7552A708A51009A2F90 /* Persistence.swift in Sources */,
+				533A9E282A76AA4900747BAA /* ImagePicker.swift in Sources */,
 				53F2A7852A71F3CD009A2F90 /* MapLocation.swift in Sources */,
 				53F2A77F2A709CA7009A2F90 /* NoteDetailView.swift in Sources */,
 				53F2A74E2A708A4F009A2F90 /* ContentView.swift in Sources */,
@@ -444,8 +450,10 @@
 				DEVELOPMENT_TEAM = BAFB3SW982;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notestcc/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotesTCC;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRDUCT_NAME) requires TouchID or FaceID permission for App Lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -476,8 +484,10 @@
 				DEVELOPMENT_TEAM = BAFB3SW982;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = notestcc/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotesTCC;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRDUCT_NAME) requires TouchID or FaceID permission for App Lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
