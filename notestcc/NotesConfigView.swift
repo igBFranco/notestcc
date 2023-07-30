@@ -11,7 +11,6 @@ import Combine
 struct NotesConfigView:View {
     @EnvironmentObject var appLockVM:AppLockViewModel
     var body: some View{
-        NavigationView{
             Form{
                 Toggle(isOn: $appLockVM.isAppLockEnabled, label: {
                     Text("Bloqueio por Biometria")
@@ -21,6 +20,17 @@ struct NotesConfigView:View {
                 })
             }
             .navigationTitle("Configurações")
+            .toolbar {
+                NavigationLink(destination: VStack {
+                    Text("Aplicativo criado utilizando SwiftUI, por Igor Bueno Franco como Trabalho de Conclusão de Curso de Engenharia de Software").padding(20).multilineTextAlignment(.center)
+                    Text("Universidade do Contestado").padding(20).fontWeight(Font.Weight.bold)
+                    Text("Campus Mafra - 2023")
+                }.navigationTitle("Informações")
+                ){
+                    Image(systemName: "info.circle")
+                    
+                }
+                
+            }
         }
-    }
 }

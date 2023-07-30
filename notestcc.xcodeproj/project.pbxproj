@@ -14,6 +14,7 @@
 		535FA1462A76D23D00BD5FCF /* NotesConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA1452A76D23D00BD5FCF /* NotesConfigView.swift */; };
 		535FA1482A76D2A000BD5FCF /* NotesLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA1472A76D2A000BD5FCF /* NotesLockView.swift */; };
 		535FA14C2A76D52000BD5FCF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA14B2A76D52000BD5FCF /* HomeView.swift */; };
+		535FA14E2A7717D100BD5FCF /* EditNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA14D2A7717D100BD5FCF /* EditNoteView.swift */; };
 		53F2A74C2A708A4F009A2F90 /* notestccApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74B2A708A4F009A2F90 /* notestccApp.swift */; };
 		53F2A74E2A708A4F009A2F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74D2A708A4F009A2F90 /* ContentView.swift */; };
 		53F2A7502A708A51009A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F2A74F2A708A51009A2F90 /* Assets.xcassets */; };
@@ -53,6 +54,7 @@
 		535FA1452A76D23D00BD5FCF /* NotesConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesConfigView.swift; sourceTree = "<group>"; };
 		535FA1472A76D2A000BD5FCF /* NotesLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesLockView.swift; sourceTree = "<group>"; };
 		535FA14B2A76D52000BD5FCF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		535FA14D2A7717D100BD5FCF /* EditNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditNoteView.swift; sourceTree = "<group>"; };
 		53F2A7482A708A4F009A2F90 /* notestcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notestcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F2A74B2A708A4F009A2F90 /* notestccApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notestccApp.swift; sourceTree = "<group>"; };
 		53F2A74D2A708A4F009A2F90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				53F2A77E2A709CA7009A2F90 /* NoteDetailView.swift */,
 				535FA14B2A76D52000BD5FCF /* HomeView.swift */,
 				53F2A7802A709CEE009A2F90 /* AddNoteView.swift */,
+				535FA14D2A7717D100BD5FCF /* EditNoteView.swift */,
 				535FA1452A76D23D00BD5FCF /* NotesConfigView.swift */,
 				535FA1472A76D2A000BD5FCF /* NotesLockView.swift */,
 				535FA1432A76D1FB00BD5FCF /* AppLockViewModel.swift */,
@@ -310,6 +313,7 @@
 				535FA1462A76D23D00BD5FCF /* NotesConfigView.swift in Sources */,
 				53F2A7582A708A51009A2F90 /* notestcc.xcdatamodeld in Sources */,
 				53F2A7552A708A51009A2F90 /* Persistence.swift in Sources */,
+				535FA14E2A7717D100BD5FCF /* EditNoteView.swift in Sources */,
 				533A9E282A76AA4900747BAA /* ImagePicker.swift in Sources */,
 				53F2A7852A71F3CD009A2F90 /* MapLocation.swift in Sources */,
 				53F2A77F2A709CA7009A2F90 /* NoteDetailView.swift in Sources */,
@@ -488,6 +492,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,6 +527,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

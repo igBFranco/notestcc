@@ -9,28 +9,59 @@ import SwiftUI
 import MapKit
 
 struct NoteDetailView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @State private var showingEditNoteSheet = false
+    @Binding var notes: [Note]
     let note: Note
+    let noteIndex: Int
     
     var body: some View {
-        VStack {
+        NavigationStack {
             Text(note.content)
-                .padding()
-            Text(note.date.formatted())
             if let image = note.image {
-                            Image(uiImage: image)
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .cornerRadius(10)
-                                .frame(height: 200)
-                        }
+                Image(uiImage: image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(10)
+                    .frame(height: 200)
+            }
             if let location = note.location {
-                            Map(coordinateRegion: .constant(MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))))
-                                .frame(height: 200)
-                                .cornerRadius(10)
-                        }
-            Spacer()
+                Map(coordinateRegion: .constant(MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))))
+                    .frame(height: 200)
+                    .cornerRadius(10)
+                    .padding(20)
+            }
+            Text(note.date.formatted())
+            .toolbar{
+                ToolbarItem(placement: .bottomBar) {
+                    HStack {
+                        Spacer()
+                    }
+                }
+                ToolbarItem(placement: .bottomBar) {
+                    Button(action: {
+                        deleteNote()
+                    }) {
+                        Image(systemName: "trash").foregroundColor(Color.red)
+                    }
+                }
+            }
+        }
+        .toolbar{
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button("Editar", action: {
+                    showingEditNoteSheet.toggle()
+                })
+            }
         }
         .navigationBarTitle(note.title)
+        .sheet(isPresented: $showingEditNoteSheet) {
+            EditNoteView(notes: $notes)
+        }
+    }
+    private func deleteNote() {
+        notes.remove(at: noteIndex)
+        presentationMode.wrappedValue.dismiss()
     }
 }
 
