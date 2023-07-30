@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		533A9E282A76AA4900747BAA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A9E272A76AA4900747BAA /* ImagePicker.swift */; };
+		535FA13D2A76C3F500BD5FCF /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 535FA13C2A76C3F500BD5FCF /* SQLite */; };
+		535FA1422A76CBDF00BD5FCF /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 535FA1412A76CBDF00BD5FCF /* GRDB */; };
 		53F2A74C2A708A4F009A2F90 /* notestccApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74B2A708A4F009A2F90 /* notestccApp.swift */; };
 		53F2A74E2A708A4F009A2F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74D2A708A4F009A2F90 /* ContentView.swift */; };
 		53F2A7502A708A51009A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F2A74F2A708A51009A2F90 /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				535FA13D2A76C3F500BD5FCF /* SQLite in Frameworks */,
+				535FA1422A76CBDF00BD5FCF /* GRDB in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +170,10 @@
 			dependencies = (
 			);
 			name = notestcc;
+			packageProductDependencies = (
+				535FA13C2A76C3F500BD5FCF /* SQLite */,
+				535FA1412A76CBDF00BD5FCF /* GRDB */,
+			);
 			productName = notestcc;
 			productReference = 53F2A7482A708A4F009A2F90 /* notestcc.app */;
 			productType = "com.apple.product-type.application";
@@ -238,6 +246,10 @@
 				Base,
 			);
 			mainGroup = 53F2A73F2A708A4F009A2F90;
+			packageReferences = (
+				535FA13B2A76C3F500BD5FCF /* XCRemoteSwiftPackageReference "SQLite.swift" */,
+				535FA1402A76CBDF00BD5FCF /* XCRemoteSwiftPackageReference "GRDB" */,
+			);
 			productRefGroup = 53F2A7492A708A4F009A2F90 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -623,6 +635,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		535FA13B2A76C3F500BD5FCF /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.14.1;
+			};
+		};
+		535FA1402A76CBDF00BD5FCF /* XCRemoteSwiftPackageReference "GRDB" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		535FA13C2A76C3F500BD5FCF /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 535FA13B2A76C3F500BD5FCF /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
+		};
+		535FA1412A76CBDF00BD5FCF /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 535FA1402A76CBDF00BD5FCF /* XCRemoteSwiftPackageReference "GRDB" */;
+			productName = GRDB;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		53F2A7562A708A51009A2F90 /* notestcc.xcdatamodeld */ = {

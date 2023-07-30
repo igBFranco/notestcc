@@ -54,14 +54,14 @@ struct AddNoteView: View {
             .navigationBarTitle("Add Note")
             .navigationBarItems(trailing:
                 Button("Save") {
-                    let newNote = Note(title: newNoteTitle, content: newNoteContent, date: newNoteDate, location: selectedLocation, image: selectedImage)
-                    notes.append(newNote)
-                    presentationMode.wrappedValue.dismiss()
+                var newNote = Note(title: newNoteTitle, content: newNoteContent, date: newNoteDate, location: selectedLocation, image: selectedImage)
+                notes.append(newNote)
+                presentationMode.wrappedValue.dismiss()
                 }
             )
             .sheet(isPresented: $isImagePickerPresented, onDismiss: loadImage) {
-                            ImagePicker(image: $selectedImage)
-                        }
+                ImagePicker(image: $selectedImage)
+            }
         }
     }
     
