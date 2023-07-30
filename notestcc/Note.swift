@@ -6,10 +6,14 @@
 //
 
 import Foundation
+import MapKit
+import UIKit
 
 struct Note: Identifiable {
     let id = UUID()
     var title: String
     var content: String
     var date: Date
+    var location: CLLocationCoordinate2D?
+    var image: UIImage?
 }

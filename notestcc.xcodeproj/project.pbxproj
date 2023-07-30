@@ -19,6 +19,7 @@
 		53F2A77D2A709C17009A2F90 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A77C2A709C17009A2F90 /* Note.swift */; };
 		53F2A77F2A709CA7009A2F90 /* NoteDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A77E2A709CA7009A2F90 /* NoteDetailView.swift */; };
 		53F2A7812A709CEE009A2F90 /* AddNoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A7802A709CEE009A2F90 /* AddNoteView.swift */; };
+		53F2A7852A71F3CD009A2F90 /* MapLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A7842A71F3CD009A2F90 /* MapLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		53F2A77C2A709C17009A2F90 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		53F2A77E2A709CA7009A2F90 /* NoteDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailView.swift; sourceTree = "<group>"; };
 		53F2A7802A709CEE009A2F90 /* AddNoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteView.swift; sourceTree = "<group>"; };
+		53F2A7842A71F3CD009A2F90 /* MapLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				53F2A74D2A708A4F009A2F90 /* ContentView.swift */,
 				53F2A77E2A709CA7009A2F90 /* NoteDetailView.swift */,
 				53F2A7802A709CEE009A2F90 /* AddNoteView.swift */,
+				53F2A7842A71F3CD009A2F90 /* MapLocation.swift */,
 				53F2A74F2A708A51009A2F90 /* Assets.xcassets */,
 				53F2A7542A708A51009A2F90 /* Persistence.swift */,
 				53F2A7562A708A51009A2F90 /* notestcc.xcdatamodeld */,
@@ -275,6 +278,7 @@
 				53F2A77D2A709C17009A2F90 /* Note.swift in Sources */,
 				53F2A7582A708A51009A2F90 /* notestcc.xcdatamodeld in Sources */,
 				53F2A7552A708A51009A2F90 /* Persistence.swift in Sources */,
+				53F2A7852A71F3CD009A2F90 /* MapLocation.swift in Sources */,
 				53F2A77F2A709CA7009A2F90 /* NoteDetailView.swift in Sources */,
 				53F2A74E2A708A4F009A2F90 /* ContentView.swift in Sources */,
 				53F2A7812A709CEE009A2F90 /* AddNoteView.swift in Sources */,
@@ -440,9 +444,12 @@
 				DEVELOPMENT_TEAM = BAFB3SW982;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NotesTCC;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,9 +476,12 @@
 				DEVELOPMENT_TEAM = BAFB3SW982;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = NotesTCC;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

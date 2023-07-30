@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct NoteDetailView: View {
     let note: Note
@@ -15,8 +16,12 @@ struct NoteDetailView: View {
             Text(note.content)
                 .padding()
             Text(note.date.formatted())
+            if let location = note.location {
+                            Map(coordinateRegion: .constant(MKCoordinateRegion(center: location, span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))))
+                                .frame(height: 200)
+                                .cornerRadius(10)
+                        }
             Spacer()
-            
         }
         .navigationBarTitle(note.title)
     }

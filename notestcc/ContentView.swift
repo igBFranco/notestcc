@@ -7,11 +7,13 @@
 
 import SwiftUI
 import CoreData
+import MapKit
+import UIKit
 
 struct ContentView: View {
     @State private var notes = [
-        Note(title: "First Note", content: "This is the content of the first note.", date: Date()),
-        Note(title: "Second Note", content: "This is the content of the second note.", date: Date())
+        Note(title: "First Note", content: "This is the content of the first note.", date: Date(), location: CLLocationCoordinate2D(latitude: 37.332331, longitude: -122.031219)),
+        Note(title: "Second Note", content: "This is the content of the second note.", date: Date(), location: CLLocationCoordinate2D(latitude: 37.332331, longitude: -122.031219))
     ]
     
     @State private var showingAddNoteSheet = false
@@ -25,9 +27,7 @@ struct ContentView: View {
             }
             .navigationBarTitle("Anotações")
             .toolbar {
-                Button(action: {
-                    showingAddNoteSheet.toggle()
-                }) {
+                NavigationLink(destination: Text("sds")){
                     Image(systemName: "gear")
                 }
             }
