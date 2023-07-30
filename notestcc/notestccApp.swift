@@ -10,10 +10,11 @@ import SwiftUI
 @main
 struct notestccApp: App {
     let persistenceController = PersistenceController.shared
+    let appLockVM = AppLockViewModel()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(appLockVM)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

@@ -54,7 +54,7 @@ struct AddNoteView: View {
             .navigationBarTitle("Add Note")
             .navigationBarItems(trailing:
                 Button("Save") {
-                var newNote = Note(title: newNoteTitle, content: newNoteContent, date: newNoteDate, location: selectedLocation, image: selectedImage)
+                let newNote = Note(title: newNoteTitle, content: newNoteContent, date: newNoteDate, location: selectedLocation, image: selectedImage)
                 notes.append(newNote)
                 presentationMode.wrappedValue.dismiss()
                 }

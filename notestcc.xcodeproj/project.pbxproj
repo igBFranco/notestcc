@@ -10,6 +10,10 @@
 		533A9E282A76AA4900747BAA /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533A9E272A76AA4900747BAA /* ImagePicker.swift */; };
 		535FA13D2A76C3F500BD5FCF /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 535FA13C2A76C3F500BD5FCF /* SQLite */; };
 		535FA1422A76CBDF00BD5FCF /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = 535FA1412A76CBDF00BD5FCF /* GRDB */; };
+		535FA1442A76D1FB00BD5FCF /* AppLockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA1432A76D1FB00BD5FCF /* AppLockViewModel.swift */; };
+		535FA1462A76D23D00BD5FCF /* NotesConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA1452A76D23D00BD5FCF /* NotesConfigView.swift */; };
+		535FA1482A76D2A000BD5FCF /* NotesLockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA1472A76D2A000BD5FCF /* NotesLockView.swift */; };
+		535FA14C2A76D52000BD5FCF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535FA14B2A76D52000BD5FCF /* HomeView.swift */; };
 		53F2A74C2A708A4F009A2F90 /* notestccApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74B2A708A4F009A2F90 /* notestccApp.swift */; };
 		53F2A74E2A708A4F009A2F90 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53F2A74D2A708A4F009A2F90 /* ContentView.swift */; };
 		53F2A7502A708A51009A2F90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53F2A74F2A708A51009A2F90 /* Assets.xcassets */; };
@@ -45,6 +49,10 @@
 /* Begin PBXFileReference section */
 		533A9E272A76AA4900747BAA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		533A9E292A76AE1300747BAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		535FA1432A76D1FB00BD5FCF /* AppLockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLockViewModel.swift; sourceTree = "<group>"; };
+		535FA1452A76D23D00BD5FCF /* NotesConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesConfigView.swift; sourceTree = "<group>"; };
+		535FA1472A76D2A000BD5FCF /* NotesLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesLockView.swift; sourceTree = "<group>"; };
+		535FA14B2A76D52000BD5FCF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		53F2A7482A708A4F009A2F90 /* notestcc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = notestcc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53F2A74B2A708A4F009A2F90 /* notestccApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = notestccApp.swift; sourceTree = "<group>"; };
 		53F2A74D2A708A4F009A2F90 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,7 +125,11 @@
 				53F2A74B2A708A4F009A2F90 /* notestccApp.swift */,
 				53F2A74D2A708A4F009A2F90 /* ContentView.swift */,
 				53F2A77E2A709CA7009A2F90 /* NoteDetailView.swift */,
+				535FA14B2A76D52000BD5FCF /* HomeView.swift */,
 				53F2A7802A709CEE009A2F90 /* AddNoteView.swift */,
+				535FA1452A76D23D00BD5FCF /* NotesConfigView.swift */,
+				535FA1472A76D2A000BD5FCF /* NotesLockView.swift */,
+				535FA1432A76D1FB00BD5FCF /* AppLockViewModel.swift */,
 				533A9E272A76AA4900747BAA /* ImagePicker.swift */,
 				53F2A7842A71F3CD009A2F90 /* MapLocation.swift */,
 				53F2A74F2A708A51009A2F90 /* Assets.xcassets */,
@@ -293,6 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				53F2A77D2A709C17009A2F90 /* Note.swift in Sources */,
+				535FA1442A76D1FB00BD5FCF /* AppLockViewModel.swift in Sources */,
+				535FA14C2A76D52000BD5FCF /* HomeView.swift in Sources */,
+				535FA1462A76D23D00BD5FCF /* NotesConfigView.swift in Sources */,
 				53F2A7582A708A51009A2F90 /* notestcc.xcdatamodeld in Sources */,
 				53F2A7552A708A51009A2F90 /* Persistence.swift in Sources */,
 				533A9E282A76AA4900747BAA /* ImagePicker.swift in Sources */,
@@ -301,6 +316,7 @@
 				53F2A74E2A708A4F009A2F90 /* ContentView.swift in Sources */,
 				53F2A7812A709CEE009A2F90 /* AddNoteView.swift in Sources */,
 				53F2A74C2A708A4F009A2F90 /* notestccApp.swift in Sources */,
+				535FA1482A76D2A000BD5FCF /* NotesLockView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,7 +481,7 @@
 				INFOPLIST_FILE = notestcc/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotesTCC;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRDUCT_NAME) requires TouchID or FaceID permission for App Lock";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRODUCT_NAME) requires TouchID or FaceID permission for App Lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -499,7 +515,7 @@
 				INFOPLIST_FILE = notestcc/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = NotesTCC;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRDUCT_NAME) requires TouchID or FaceID permission for App Lock";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "$(PRODUCT_NAME) requires TouchID or FaceID permission for App Lock";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

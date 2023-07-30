@@ -9,47 +9,27 @@ import SwiftUI
 import CoreData
 import MapKit
 import UIKit
+import Combine
 
 struct ContentView: View {
-    @State private var notes = [
-        Note(title: "First Note", content: "This is the content of the first note.", date: Date(), location: CLLocationCoordinate2D(latitude: 37.332331, longitude: -122.031219)),
-        Note(title: "Second Note", content: "This is the content of the second note.", date: Date(), location: CLLocationCoordinate2D(latitude: 37.332331, longitude: -122.031219))
-    ]
     @State private var showingAddNoteSheet = false
-    
+    @EnvironmentObject var appLockVM: AppLockViewModel
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(notes) { note in
-                    NavigationLink(destination: NoteDetailView(note: note)) {
-                    Text(note.title)
-                    }
-                }
-                .onDelete(perform: deleteNote)
+        ZStack{
+            if !appLockVM.isAppLockEnabled || appLockVM.isAppUnlocked{
+                HomeView().environmentObject(appLockVM)
             }
-            .navigationBarTitle("Anotações")
-            .toolbar {
-                NavigationLink(destination: Text("sds")){
-                    Image(systemName: "gear")
-                }
+            else {
+                NotesLockView().environmentObject(appLockVM)
             }
-            .toolbar {
-                Button(action: {
-                    showingAddNoteSheet.toggle()
-                }) {
-                    Image(systemName: "plus.app.fill")
-                }
-            }
-            
         }
-        .sheet(isPresented: $showingAddNoteSheet) {
-            AddNoteView(notes: $notes)
+        .onAppear{
+            if appLockVM.isAppLockEnabled{
+                appLockVM.appLockValidation()
+            }
         }
     }
     
-    private func deleteNote(at offsets: IndexSet) {
-            notes.remove(atOffsets: offsets)
-        }
 }
 
 
