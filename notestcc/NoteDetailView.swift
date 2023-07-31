@@ -11,6 +11,7 @@ import MapKit
 struct NoteDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var showingEditNoteSheet = false
+    @State private var showingAlert = false
     @Binding var notes: [Note]
     let note: Note
     let noteIndex: Int
@@ -40,9 +41,17 @@ struct NoteDetailView: View {
                 }
                 ToolbarItem(placement: .bottomBar) {
                     Button(action: {
-                        deleteNote()
+                       showingAlert = true
                     }) {
                         Image(systemName: "trash").foregroundColor(Color.red)
+                    }.alert("Deseja realemente excluir a anotação?", isPresented: $showingAlert) {
+                        Button("Cancelar", role: .cancel) {
+                            showingAlert = false
+                        }
+                        Button("Excluir", role: .destructive) {
+                            deleteNote()
+                            showingAlert = false
+                        }
                     }
                 }
             }
